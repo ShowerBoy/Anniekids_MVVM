@@ -9,12 +9,11 @@ import com.annie.annieforchild.data.DemoRepository;
 import com.annie.annieforchild.entity.LoginByCodeBean;
 import com.annie.annieforchild.entity.VcodeBean;
 import com.annie.annieforchild.ui.main.activity.MainActivity;
+import com.annie.annieforchild.utils.http.ApiException;
 import com.blankj.utilcode.util.RegexUtils;
 
-import java.util.Observable;
-
 import io.reactivex.functions.Consumer;
-import me.goldze.mvvmhabit.base.BaseModel;
+import io.reactivex.observers.ResourceObserver;
 import me.goldze.mvvmhabit.base.BaseViewModel;
 import me.goldze.mvvmhabit.binding.command.BindingAction;
 import me.goldze.mvvmhabit.binding.command.BindingCommand;
@@ -63,13 +62,22 @@ public class VcodeViewModel extends BaseViewModel<DemoRepository> {
                     .compose(RxUtils.<BaseResponse<VcodeBean>>bindToLifecycle(getLifecycleProvider()))
                     .compose(RxUtils.schedulersTransformer())
                     .compose(RxUtils.exceptionTransformer())
-                    .subscribe(new Consumer<BaseResponse<VcodeBean>>() {
+                    .subscribe(new ResourceObserver<BaseResponse<VcodeBean>>() {
                         @Override
-                        public void accept(BaseResponse<VcodeBean> baseResponse) throws Exception {
-                            if (baseResponse.getData() != null) {
-                                serialNumber = baseResponse.getData().getSerialNumber();
-                            }
+                        public void onNext(BaseResponse<VcodeBean> baseResponse) {
+                            serialNumber = baseResponse.getData().getSerialNumber();
                             ToastUtils.showShort(baseResponse.getMsg());
+                        }
+
+                        @Override
+                        public void onError(Throwable e) {
+                            ApiException apiException = (ApiException) e.getCause();
+                            ToastUtils.showShort(apiException.getMessage() + apiException.getErrorCode());
+                        }
+
+                        @Override
+                        public void onComplete() {
+
                         }
                     });
         }
@@ -85,16 +93,23 @@ public class VcodeViewModel extends BaseViewModel<DemoRepository> {
                     .compose(RxUtils.<BaseResponse<LoginByCodeBean>>bindToLifecycle(getLifecycleProvider()))
                     .compose(RxUtils.schedulersTransformer())
                     .compose(RxUtils.exceptionTransformer())
-                    .subscribe(new Consumer<BaseResponse<LoginByCodeBean>>() {
+                    .subscribe(new ResourceObserver<BaseResponse<LoginByCodeBean>>() {
                         @Override
-                        public void accept(BaseResponse<LoginByCodeBean> baseResponse) throws Exception {
+                        public void onNext(BaseResponse<LoginByCodeBean> baseResponse) {
                             ToastUtils.showShort(baseResponse.getMsg());
-                            if (baseResponse.getStatus() == 0) {
-                                startActivity(MainActivity.class);
-                                finish();
-                            } else {
+                            startActivity(MainActivity.class);
+                            finish();
+                        }
 
-                            }
+                        @Override
+                        public void onError(Throwable e) {
+                            ApiException apiException = (ApiException) e.getCause();
+                            ToastUtils.showShort(apiException.getMessage() + apiException.getErrorCode());
+                        }
+
+                        @Override
+                        public void onComplete() {
+
                         }
                     });
         }

@@ -7,7 +7,12 @@ import com.annie.annieforchild.data.source.local.LocalDataSource;
 import com.annie.annieforchild.entity.LoginByCodeBean;
 import com.annie.annieforchild.entity.VcodeBean;
 
+import org.reactivestreams.Publisher;
+
+import io.reactivex.Flowable;
+import io.reactivex.FlowableTransformer;
 import io.reactivex.Observable;
+import io.reactivex.functions.Function;
 import me.goldze.mvvmhabit.base.BaseModel;
 import me.goldze.mvvmhabit.http.BaseResponse;
 
@@ -57,4 +62,5 @@ public class DemoRepository extends BaseModel implements HttpDataSource, LocalDa
     public Observable<BaseResponse<LoginByCodeBean>> login(String phone, String password) {
         return httpDataSource.login(phone, password);
     }
+
 }

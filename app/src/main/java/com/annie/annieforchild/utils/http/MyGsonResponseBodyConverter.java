@@ -38,20 +38,20 @@ public class MyGsonResponseBodyConverter<T> implements Converter<ResponseBody, T
         //这样，我们就成功的将该异常交给onError()去处理了。
         if (re.getStatus() != 0) {
             value.close();
-//            throw new ApiException(re.getCode(), re.getMessage());
+            throw new ApiException(re.getStatus(), re.getMsg());
         }
 
         /**
          * 自定义返回结果解析
          * 在返回结果里提取data
          */
-        JsonObject jsonObject = new JsonParser().parse(response).getAsJsonObject();
-        int status = jsonObject.get("status").getAsInt();
-        if (status != 0) {
-            value.close();
-            throw new ApiException(status, jsonObject.get("msg").getAsString());
-        }
-        String jsonString = jsonObject.get("data").toString();
+//        JsonObject jsonObject = new JsonParser().parse(response).getAsJsonObject();
+//        int status = jsonObject.get("status").getAsInt();
+//        if (status != 0) {
+//            value.close();
+//            throw new ApiException(status, jsonObject.get("msg").getAsString());
+//        }
+//        String jsonString = jsonObject.get("data").toString();
 
 
 //如果是1（数据正常返回），我们正常解析
