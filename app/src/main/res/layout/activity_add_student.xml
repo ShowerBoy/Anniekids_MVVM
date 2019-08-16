@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.annie.annieforchild.ui.login.vm.AddStudentViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/title_height">
+
+                <TextView
+                    android:id="@+id/title_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text=""
+                    android:textColor="@color/title_text"
+                    android:textSize="@dimen/title_size" />
+
+                <ImageView
+                    android:id="@+id/go_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="2dp"
+                    android:paddingStart="12dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="8dp"
+                    android:src="@drawable/icon_left"
+                    binding:onClickCommand="@{viewModel.onBackClick}" />
+            </RelativeLayout>
+
+            <View style="@style/line" />
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_size"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="@dimen/margin_size"
+            android:stateListAnimator="@drawable/lift_on_touch"
+            binding:cardBackgroundColor="@android:color/white"
+            binding:cardCornerRadius="4dp"
+            binding:cardUseCompatPadding="false"
+            binding:onClickCommand="@{viewModel.onBindStuClick}">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/margin_size">
+
+                <ImageView
+                    android:id="@+id/bind_stu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_bind_stu" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_size"
+                    android:layout_toEndOf="@+id/bind_stu"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="绑定线下机构学员"
+                        android:textColor="@color/title_text"
+                        android:textSize="@dimen/text_top_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="添加已经在线下学习安妮花课程的学员 选择此项绑定学员号"
+                        android:textColor="@color/title_text"
+                        android:textSize="@dimen/text_size" />
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_size"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="@dimen/margin_size"
+            android:stateListAnimator="@drawable/lift_on_touch"
+            binding:cardBackgroundColor="@android:color/white"
+            binding:cardCornerRadius="4dp"
+            binding:cardUseCompatPadding="false"
+            binding:onClickCommand="@{viewModel.onAddStuClick}">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/margin_size">
+
+                <ImageView
+                    android:id="@+id/add_stu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_add_child" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_size"
+                    android:layout_toEndOf="@+id/add_stu"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="添加新学员"
+                        android:textColor="@color/title_text"
+                        android:textSize="@dimen/text_top_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="未在安妮花线下机构学习 选择此项添加新学员"
+                        android:textColor="@color/title_text"
+                        android:textSize="@dimen/text_size" />
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</layout>

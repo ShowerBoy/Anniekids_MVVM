@@ -38,6 +38,12 @@ dependencies {
         exclude group: 'com.android.support'
     }
 
+    api rootProject.ext.support["design"]
     api rootProject.ext.dependencies["bottom-navigation-bar"]
     api rootProject.ext.dependencies["utilcode"]
+    api rootProject.ext.dependencies["cardview"]
+    api rootProject.ext.dependencies["SmartRefreshLayout"]
+    api rootProject.ext.dependencies["circleimageview"]
+    api rootProject.ext.dependencies["banner"]
+    api rootProject.ext.dependencies["magicIndicator"]
 }

@@ -14,6 +14,8 @@
     <color name="text_back_green">#E3F7C8</color>
     <color name="top_tab_back">#fafbfd</color>
     <color name="title_text">#333333</color>
+    <color name="text_color">#666666</color>
     <color name="line_color">#EFEFEF</color>
     <color name="btn_gray">#D8D8D8</color>
+    <color name="clarity">#00000000</color>
 </resources>

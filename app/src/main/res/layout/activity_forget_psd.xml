@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.annie.annieforchild.ui.login.vm.ForgetPsdViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/title_height">
+
+                <TextView
+                    android:id="@+id/title_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text=""
+                    android:textColor="@color/title_text"
+                    android:textSize="@dimen/title_size" />
+
+                <ImageView
+                    android:id="@+id/go_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="2dp"
+                    android:paddingStart="12dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="8dp"
+                    android:src="@drawable/icon_left"
+                    binding:onClickCommand="@{viewModel.onBackClick}" />
+            </RelativeLayout>
+
+            <View style="@style/line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="56dp"
+            android:paddingEnd="56dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_size_big"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="6dp"
+                    android:src="@drawable/icon_phone" />
+
+                <EditText
+                    android:id="@+id/forget_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:inputType="phone"
+                    android:text="@={viewModel.phone}"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/text_gray"
+                    android:textSize="15sp"
+                    android:theme="@style/MyEditText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_size_big"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="6dp"
+                    android:src="@drawable/icon_vcode" />
+
+                <EditText
+                    android:id="@+id/forget_vcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:inputType="number"
+                    android:text="@={viewModel.vcode}"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/text_gray"
+                    android:textSize="15sp"
+                    android:theme="@style/MyEditText" />
+
+                <TextView
+                    android:id="@+id/get_vcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:singleLine="true"
+                    android:text="@={viewModel.getVcode}"
+                    android:textColor="@color/text_orange"
+                    android:textSize="14sp"
+                    binding:onClickCommand="@{viewModel.onGetVcodeClick}" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_size_big"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="6dp"
+                    android:src="@drawable/icon_password" />
+
+                <EditText
+                    android:id="@+id/forget_psd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:inputType="textPassword"
+                    android:text="@={viewModel.psd}"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/text_gray"
+                    android:textSize="15sp"
+                    android:theme="@style/MyEditText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_size_big"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="6dp"
+                    android:src="@drawable/icon_password" />
+
+                <EditText
+                    android:id="@+id/forget_confirm_psd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:inputType="textPassword"
+                    android:text="@={viewModel.confirmPsd}"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/text_gray"
+                    android:textSize="15sp"
+                    android:theme="@style/MyEditText" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/confirmBtn"
+                style="@style/commitBtn"
+                android:layout_marginTop="@dimen/margin_size_big"
+                android:enabled="false"
+                android:text="确 认"
+                binding:onClickCommand="@{viewModel.onForgetPsdClick}" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

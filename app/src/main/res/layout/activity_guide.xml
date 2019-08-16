@@ -5,7 +5,7 @@
 
         <variable
             name="viewModel"
-            type="com.annie.annieforchild.ui.GuideViewModel" />
+            type="com.annie.annieforchild.ui.main.vm.GuideViewModel" />
     </data>
 
     <android.support.constraint.ConstraintLayout

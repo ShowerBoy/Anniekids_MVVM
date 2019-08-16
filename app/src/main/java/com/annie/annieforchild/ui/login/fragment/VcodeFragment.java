@@ -12,15 +12,12 @@ import android.view.ViewGroup;
 
 import com.annie.annieforchild.AppViewModelFactory;
 import com.annie.annieforchild.R;
-import com.annie.annieforchild.data.DemoRepository;
 import com.annie.annieforchild.databinding.FragmentVcodeBinding;
-import com.annie.annieforchild.ui.login.vm.LoginViewModel;
 import com.annie.annieforchild.ui.login.vm.VcodeViewModel;
 import com.annie.annieforchild.utils.SystemUtils;
 
-import me.goldze.mvvmhabit.BR;
+import com.annie.annieforchild.BR;
 import me.goldze.mvvmhabit.base.BaseFragment;
-import me.goldze.mvvmhabit.base.BaseViewModel;
 
 public class VcodeFragment extends BaseFragment<FragmentVcodeBinding, VcodeViewModel> {
     private CountDownTimer countDownTimer;

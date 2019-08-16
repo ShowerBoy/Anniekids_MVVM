@@ -1,4 +1,4 @@
-package com.annie.annieforchild.ui;
+package com.annie.annieforchild.ui.main.vm;
 
 import android.app.Application;
 import android.support.annotation.NonNull;

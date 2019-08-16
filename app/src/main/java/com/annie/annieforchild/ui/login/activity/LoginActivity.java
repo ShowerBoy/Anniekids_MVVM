@@ -1,28 +1,23 @@
 package com.annie.annieforchild.ui.login.activity;
 
-import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.View;
 
-import com.annie.annieforchild.AppViewModelFactory;
 import com.annie.annieforchild.BR;
 import com.annie.annieforchild.R;
 import com.annie.annieforchild.databinding.ActivityLoginBinding;
-import com.annie.annieforchild.ui.adapter.BaseFragmentPagerAdapter;
+import com.annie.annieforchild.ui.adapter.base.BaseFragmentPagerAdapter;
 import com.annie.annieforchild.ui.login.fragment.LoginFragment;
 import com.annie.annieforchild.ui.login.fragment.VcodeFragment;
-import com.annie.annieforchild.ui.login.vm.LoginViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import me.goldze.mvvmhabit.base.BaseActivity;
 import me.goldze.mvvmhabit.base.BaseViewModel;
-import me.goldze.mvvmhabit.utils.ToastUtils;
 
-public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewModel> {
+public class LoginActivity extends BaseActivity<ActivityLoginBinding, BaseViewModel> {
     private List<Fragment> fragments;
     private List<String> strings;
 
@@ -36,16 +31,16 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
         return BR.viewModel;
     }
 
-    @Override
-    public LoginViewModel initViewModel() {
-        AppViewModelFactory factory = AppViewModelFactory.getInstance(getApplication());
-        return ViewModelProviders.of(this, factory).get(LoginViewModel.class);
-    }
+//    @Override
+//    public LoginViewModel initViewModel() {
+//        AppViewModelFactory factory = AppViewModelFactory.getInstance(getApplication());
+//        return ViewModelProviders.of(this, factory).get(LoginViewModel.class);
+//    }
 
     @Override
     public void initData() {
-        binding.topLayout.goBack.setVisibility(View.GONE);
-        binding.topLayout.titleBar.setText("登陆");
+        binding.goBack.setVisibility(View.GONE);
+        binding.titleBar.setText("登陆");
         initViewPager();
     }
 

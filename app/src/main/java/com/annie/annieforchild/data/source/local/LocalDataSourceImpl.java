@@ -1,5 +1,6 @@
 package com.annie.annieforchild.data.source.local;
 
+import me.goldze.mvvmhabit.utils.SPUtils;
 import okhttp3.Interceptor;
 
 public class LocalDataSourceImpl implements LocalDataSource {
@@ -26,5 +27,25 @@ public class LocalDataSourceImpl implements LocalDataSource {
     @Override
     public void toTaobao(String url) {
 
+    }
+
+    @Override
+    public void savePhone(String phone) {
+        SPUtils.getInstance().put("phone", phone);
+    }
+
+    @Override
+    public void savePassword(String password) {
+        SPUtils.getInstance().put("password", password);
+    }
+
+    @Override
+    public String getPhone() {
+        return SPUtils.getInstance().getString("phone");
+    }
+
+    @Override
+    public String getPassword() {
+        return SPUtils.getInstance().getString("password");
     }
 }

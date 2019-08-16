@@ -150,7 +150,6 @@ public class BaseViewModel<M extends BaseModel> extends AndroidViewModel impleme
     public BindingCommand onBackClick = new BindingCommand(new BindingAction() {
         @Override
         public void call() {
-            ToastUtils.showShort("返回");
             finish();
         }
     });

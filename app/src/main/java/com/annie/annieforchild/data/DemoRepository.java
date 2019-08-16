@@ -4,6 +4,9 @@ import android.support.annotation.NonNull;
 
 import com.annie.annieforchild.data.source.http.HttpDataSource;
 import com.annie.annieforchild.data.source.local.LocalDataSource;
+import com.annie.annieforchild.entity.DemoEntity;
+import com.annie.annieforchild.entity.ForgetPsdBean;
+import com.annie.annieforchild.entity.HomeData;
 import com.annie.annieforchild.entity.LoginByCodeBean;
 import com.annie.annieforchild.entity.VcodeBean;
 
@@ -44,13 +47,33 @@ public class DemoRepository extends BaseModel implements HttpDataSource, LocalDa
     }
 
     @Override
+    public void savePhone(String phone) {
+        localDataSource.savePhone(phone);
+    }
+
+    @Override
+    public void savePassword(String password) {
+        localDataSource.savePassword(password);
+    }
+
+    @Override
+    public String getPhone() {
+        return localDataSource.getPhone();
+    }
+
+    @Override
+    public String getPassword() {
+        return localDataSource.getPassword();
+    }
+
+    @Override
     public Observable<Object> guide() {
         return httpDataSource.guide();
     }
 
     @Override
-    public Observable<BaseResponse<VcodeBean>> getVerificationCode(String phone, int type) {
-        return httpDataSource.getVerificationCode(phone, type);
+    public Observable<BaseResponse<VcodeBean>> getVerificationCode(String phone, String username, int type) {
+        return httpDataSource.getVerificationCode(phone, username, type);
     }
 
     @Override
@@ -62,5 +85,21 @@ public class DemoRepository extends BaseModel implements HttpDataSource, LocalDa
     public Observable<BaseResponse<LoginByCodeBean>> login(String phone, String password) {
         return httpDataSource.login(phone, password);
     }
+
+    @Override
+    public Observable<BaseResponse<ForgetPsdBean>> resetPassword(String phone, int code, String password, int serialNumber) {
+        return httpDataSource.resetPassword(phone, code, password, serialNumber);
+    }
+
+    @Override
+    public Observable<BaseResponse<DemoEntity>> bindStudent(String username, String phone, int code, int serialNumber) {
+        return httpDataSource.bindStudent(username, phone, code, serialNumber);
+    }
+
+    @Override
+    public Observable<BaseResponse<HomeData>> getHomeData(String username) {
+        return httpDataSource.getHomeData(username);
+    }
+
 
 }

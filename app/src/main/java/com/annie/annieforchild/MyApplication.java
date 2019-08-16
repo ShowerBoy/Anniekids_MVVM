@@ -1,6 +1,6 @@
 package com.annie.annieforchild;
 
-import com.annie.annieforchild.ui.GuideActivity;
+import com.annie.annieforchild.ui.main.activity.GuideActivity;
 import com.blankj.utilcode.util.Utils;
 import me.goldze.mvvmhabit.base.BaseApplication;
 import me.goldze.mvvmhabit.crash.CaocConfig;

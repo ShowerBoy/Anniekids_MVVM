@@ -9,31 +9,39 @@
             type="me.goldze.mvvmhabit.base.BaseViewModel" />
     </data>
 
-    <RelativeLayout
-        android:id="@+id/relative"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/title_height">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/title_bar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text=""
-            android:textColor="@color/title_text"
-            android:textSize="@dimen/title_size" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height">
 
-        <ImageView
-            android:id="@+id/go_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="2dp"
-            android:paddingStart="12dp"
-            android:paddingTop="8dp"
-            android:paddingEnd="12dp"
-            android:paddingBottom="8dp"
-            android:src="@drawable/icon_left"
-            binding:onClickCommand="@{viewModel.onBackClick}" />
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/title_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text=""
+                android:textColor="@color/title_text"
+                android:textSize="@dimen/title_size" />
+
+            <ImageView
+                android:id="@+id/go_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="2dp"
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:src="@drawable/icon_left"
+                binding:onClickCommand="@{viewModel.onBackClick}" />
+        </RelativeLayout>
+
+        <View style="@style/line" />
+    </LinearLayout>
+
 </layout>

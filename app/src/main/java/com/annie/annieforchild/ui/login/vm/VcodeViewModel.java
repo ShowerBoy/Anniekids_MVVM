@@ -3,11 +3,13 @@ package com.annie.annieforchild.ui.login.vm;
 import android.app.Application;
 import android.databinding.ObservableField;
 import android.support.annotation.NonNull;
+import android.text.Editable;
 import android.text.TextUtils;
 
 import com.annie.annieforchild.data.DemoRepository;
 import com.annie.annieforchild.entity.LoginByCodeBean;
 import com.annie.annieforchild.entity.VcodeBean;
+import com.annie.annieforchild.ui.login.activity.AddStudentActivity;
 import com.annie.annieforchild.ui.main.activity.MainActivity;
 import com.annie.annieforchild.utils.http.ApiException;
 import com.blankj.utilcode.util.RegexUtils;
@@ -26,12 +28,15 @@ public class VcodeViewModel extends BaseViewModel<DemoRepository> {
     public ObservableField<String> phone = new ObservableField<>();
     public ObservableField<String> vcode = new ObservableField<>();
     public ObservableField<String> getVcode = new ObservableField<>();
+
+
     private int serialNumber;
     public UIChangeObservable uc = new UIChangeObservable();
 
     public class UIChangeObservable {
         //验证码点击
         public SingleLiveEvent<Boolean> pVcodeEvent = new SingleLiveEvent<>();
+
     }
 
     public VcodeViewModel(@NonNull Application application) {
@@ -40,6 +45,7 @@ public class VcodeViewModel extends BaseViewModel<DemoRepository> {
 
     public VcodeViewModel(@NonNull Application application, DemoRepository model) {
         super(application, model);
+        phone.set(model.getPhone());
         getVcode.set("获取验证码");
     }
 
@@ -58,7 +64,7 @@ public class VcodeViewModel extends BaseViewModel<DemoRepository> {
                 return;
             }
             uc.pVcodeEvent.setValue(uc.pVcodeEvent.getValue() == null || !uc.pVcodeEvent.getValue());
-            model.getVerificationCode(phone.get(), 1)
+            model.getVerificationCode(phone.get(), "", 1)
                     .compose(RxUtils.<BaseResponse<VcodeBean>>bindToLifecycle(getLifecycleProvider()))
                     .compose(RxUtils.schedulersTransformer())
                     .compose(RxUtils.exceptionTransformer())
@@ -96,9 +102,15 @@ public class VcodeViewModel extends BaseViewModel<DemoRepository> {
                     .subscribe(new ResourceObserver<BaseResponse<LoginByCodeBean>>() {
                         @Override
                         public void onNext(BaseResponse<LoginByCodeBean> baseResponse) {
+                            model.savePhone(phone.get());
                             ToastUtils.showShort(baseResponse.getMsg());
+//                            if (baseResponse.getData().getIsHaveStudents() == 0) {
+//                            startActivity(AddStudentActivity.class);
+//                            } else {
                             startActivity(MainActivity.class);
                             finish();
+//                            }
+
                         }
 
                         @Override
@@ -114,4 +126,6 @@ public class VcodeViewModel extends BaseViewModel<DemoRepository> {
                     });
         }
     });
+
+
 }

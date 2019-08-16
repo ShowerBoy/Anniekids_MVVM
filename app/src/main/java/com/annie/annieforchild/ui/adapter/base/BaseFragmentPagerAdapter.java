@@ -1,4 +1,4 @@
-package com.annie.annieforchild.ui.adapter;
+package com.annie.annieforchild.ui.adapter.base;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
