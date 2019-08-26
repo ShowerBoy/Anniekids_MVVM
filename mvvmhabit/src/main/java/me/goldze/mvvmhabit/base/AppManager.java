@@ -15,6 +15,7 @@ public class AppManager {
     private static Stack<Fragment> fragmentStack;
     private static AppManager instance;
 
+
     private AppManager() {
     }
 
@@ -48,6 +49,16 @@ public class AppManager {
         }
         activityStack.add(activity);
     }
+
+    /**
+     * 是否包含Activity
+     */
+
+    public  boolean contains(Activity activity){
+          return  activityStack.contains(activity);
+    }
+
+
 
     /**
      * 移除指定的Activity

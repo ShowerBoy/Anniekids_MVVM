@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="opinionModel"
+            type="com.xingzhi.xingzhiclass.mine.activity.OpinionActivity" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/appbackground"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_title_bar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="选择反馈类型"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/font_size_14" />
+
+        <RelativeLayout
+            android:id="@+id/opinionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/opinion1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@{opinionModel.selectType==1? @drawable/border_corner_topbar:@drawable/border_corner_gray}"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:onClick="@{opinionModel.onOinionEvent}"
+                android:text="功能异常"
+                android:textColor="@{opinionModel.selectType==1?  @color/topbarbackground : @color/text_grayb}" />
+
+
+            <TextView
+                android:id="@+id/opinion2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/opinion1"
+                android:background="@{opinionModel.selectType==2? @drawable/border_corner_topbar:@drawable/border_corner_gray}"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:onClick="@{opinionModel.onOinionEvent}"
+                android:text="内容问题"
+                android:textColor="@{opinionModel.selectType==2?  @color/topbarbackground : @color/text_grayb}" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/opinionLayout"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white">
+
+            <EditText
+                android:id="@+id/opinionEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="请留下您的宝贵意见"
+                android:maxLength="200"
+                android:padding="5dp"
+                android:textColor="@color/text_black"
+                android:textColorHint="@color/text_grayb"
+                android:textSize="@dimen/font_size_12" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="联系方式"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/font_size_14" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:hint="手机号/微信"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_grayb"
+            android:textSize="@dimen/font_size_12" />
+
+
+        <TextView
+            android:id="@+id/opinionmitSbBtn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/margin_size_50"
+            android:layout_marginRight="@dimen/margin_size_50"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_button_bg"
+            android:gravity="center"
+            android:text="提交"
+            android:onClick="@{opinionModel.onOinionEvent}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_18" />
+
+
+    </LinearLayout>
+</layout>

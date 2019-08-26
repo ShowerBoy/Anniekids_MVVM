@@ -9,11 +9,11 @@ import com.annie.annieforchild.BR;
 import com.annie.annieforchild.R;
 import com.annie.annieforchild.databinding.ActivityMainBinding;
 import com.annie.annieforchild.ui.main.fragment.FifthFragment;
-import com.annie.annieforchild.ui.main.fragment.FirstFragment;
+import com.annie.annieforchild.ui.main.home.fragment.FirstFragment;
 import com.annie.annieforchild.ui.main.fragment.FourthFragment;
 import com.annie.annieforchild.ui.main.fragment.SecondFragment;
 import com.annie.annieforchild.ui.main.fragment.ThirdFragment;
-import com.annie.annieforchild.ui.main.vm.MainViewModel;
+import com.annie.annieforchild.ui.main.home.fragment.HomeFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,7 +47,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, BaseViewMode
 
     private void initFragment() {
         fragments = new ArrayList<>();
-        fragments.add(new FirstFragment());
+        fragments.add(new HomeFragment());
         fragments.add(new SecondFragment());
         fragments.add(new ThirdFragment());
         fragments.add(new FourthFragment());
@@ -60,7 +60,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, BaseViewMode
 
     private void initBottomTab() {
         NavigationController navigationController = binding.pagerBottomTab.material()
-                .addItem(R.drawable.icon_main_f, R.drawable.icon_main_t, "首页", ContextCompat.getColor(this, R.color.text_orange))
+                .addItem(R.drawable.home_navig_home, R.drawable.home_navig_home_s, "首页", ContextCompat.getColor(this, R.color.text_orange))
                 .addItem(R.drawable.icon_lesson_f, R.drawable.icon_lesson_t, "课程", ContextCompat.getColor(this, R.color.text_orange))
                 .addItem(R.drawable.icon_daka_f, R.drawable.icon_daka_t, "打卡", ContextCompat.getColor(this, R.color.text_orange))
                 .addItem(R.drawable.icon_discover_f, R.drawable.icon_discover_t, "发现", ContextCompat.getColor(this, R.color.text_orange))

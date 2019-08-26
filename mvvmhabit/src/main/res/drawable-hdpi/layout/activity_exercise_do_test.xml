@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.xingzhi.xingzhiclass.exercise.activity.DoExerciseActivity">
+
+    <include layout="@layout/layout_title_bar" />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/exerciseViewPager"
+        android:layout_below="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_heigh"
+            android:background="@color/divider"/>
+
+        <ProgressBar
+            android:id="@+id/exerciseProgress"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:visibility="gone"
+            android:layout_below="@+id/downTotal"
+            android:layout_marginTop="2dp"
+            android:progressDrawable="@drawable/progressbar_background" />
+
+        <ImageView
+            android:id="@+id/bottomImage"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/icon_collect" />
+
+
+        <TextView
+            android:id="@+id/currentNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="0/0"
+            android:textColor="@color/text_black" />
+
+        <LinearLayout
+            android:id="@+id/submitLayout"
+            android:layout_toLeftOf="@+id/currentNum"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/submitExerciseIv"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_submit_exercise" />
+
+        <TextView
+            android:id="@+id/submitExerciseTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="3dp"
+            android:text="交卷"
+            android:textSize="@dimen/font_size_12"
+            android:textColor="@color/text_black" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/noExerciseData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/text_grayb"
+        android:visibility="gone"
+        android:text="没有数据，前去答题"/>
+
+
+
+</RelativeLayout>

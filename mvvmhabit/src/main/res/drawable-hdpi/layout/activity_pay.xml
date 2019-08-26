@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appbackground"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/payTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="支付金额"
+            android:textColor="@color/text_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/payTip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="￥899"
+            android:textColor="@color/text_yellow"
+            android:textSize="@dimen/font_size_24" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:layout_marginTop="10dp">
+
+
+        <ImageView
+            android:id="@+id/aliicon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+           android:layout_centerVertical="true"
+            android:src="@drawable/icon_ali_pay"/>
+
+        <TextView
+            android:id="@+id/aliTitle"
+            android:layout_toRightOf="@+id/aliicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/font_size_16"
+            android:textColor="@color/text_black"
+            android:text="支付宝支付"/>
+
+
+        <TextView
+            android:layout_below="@+id/aliTitle"
+            android:layout_toRightOf="@+id/aliicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:textSize="@dimen/font_size_12"
+            android:textColor="@color/text_grayb"
+            android:text="支付宝安全支付"/>
+
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/checkbox"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_heigh"
+        android:background="@color/divider"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white">
+
+
+        <ImageView
+            android:id="@+id/wxicon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_wx_pay"/>
+
+        <TextView
+            android:id="@+id/wxTitle"
+            android:layout_toRightOf="@+id/wxicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/font_size_16"
+            android:textColor="@color/text_black"
+            android:text="微信支付"/>
+
+
+        <TextView
+            android:layout_below="@+id/wxTitle"
+            android:layout_toRightOf="@+id/wxicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:textSize="@dimen/font_size_12"
+            android:textColor="@color/text_grayb"
+            android:text="微信安全支付"/>
+
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/checkbox"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:background="@drawable/shape_button_bg"
+        android:textColor="@color/white"
+        android:layout_marginTop="50dp"
+        android:textSize="@dimen/font_size_16"
+        android:text="立即支付"/>
+
+</LinearLayout>

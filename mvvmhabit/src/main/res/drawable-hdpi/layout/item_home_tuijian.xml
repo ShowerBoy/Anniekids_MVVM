@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_height="@dimen/app_item_height">
+        <View
+            android:id="@+id/sectionFlag"
+            android:layout_width="4dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:background="@color/topbarbackground"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/sectionTitle"
+            android:layout_toRightOf="@+id/sectionFlag"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/text_black"
+            android:textStyle="bold"
+            android:text="精品课程"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="@dimen/divider_heigh"
+            android:background="@color/divider"/>
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:id="@+id/tuijianImg"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/default_placeholder_01"
+            android:scaleType="fitXY"
+            app:riv_corner_radius="@dimen/image_round_radius"
+            app:riv_mutate_background="true"
+            />
+
+        <TextView
+            android:id="@+id/tuijainTitle"
+            android:layout_below="@+id/tuijianImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XXX"
+            android:layout_marginTop="5dp"
+            android:textSize="@dimen/font_size_14"
+            android:textColor="@color/text_black"/>
+
+
+        <TextView
+            android:id="@+id/tuijainPrice"
+            android:layout_below="@+id/tuijianImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XXX"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:textSize="@dimen/font_size_18"
+            android:textStyle="bold"
+            android:textColor="@color/text_red"/>
+    </RelativeLayout>
+
+</LinearLayout>

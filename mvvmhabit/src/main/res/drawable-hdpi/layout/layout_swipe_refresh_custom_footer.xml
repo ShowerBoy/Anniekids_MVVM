@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.xingzhi.xingzhiclass.common.view.swipeLayout.SwipeCustomcFooterView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/swipe_refresh_footer_height">
+
+
+        <ImageView
+            android:id="@+id/ivArrow"
+            android:layout_width="14.04dp"
+            android:layout_height="20.52dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/swipe_refresh_footer_pull_arrow" />
+
+        <com.aspsine.swipetoloadlayout.SwipeLoadMoreFooterLayout
+            android:layout_centerInParent="true"
+            android:id="@+id/swipe_refresh_footer_loading_more"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            />
+
+        <!--<ImageView-->
+            <!--android:id="@+id/ivSuccess"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginRight="8dp"-->
+            <!--android:layout_toLeftOf="@+id/tvLoadMore"-->
+            <!--android:background="@drawable/icon_footer_loading_success" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tvLoadMore"-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:gravity="center"-->
+            <!--android:text="LoadMore"-->
+            <!--android:textColor="@color/black"/>-->
+    </RelativeLayout>
+</com.xingzhi.xingzhiclass.common.view.swipeLayout.SwipeCustomcFooterView>

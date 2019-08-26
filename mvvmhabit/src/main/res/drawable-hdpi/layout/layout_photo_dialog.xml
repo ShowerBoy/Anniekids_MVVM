@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/appbackground"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/choose_from_album"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="手机相册"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/margin_size_15" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_heigh"
+        android:background="@color/divider" />
+
+    <TextView
+        android:id="@+id/choose_from_camera"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="拍摄"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/margin_size_15" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_heigh"
+        android:background="@color/divider" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_heigh"
+        android:layout_marginTop="4dp"
+        android:background="@color/divider" />
+
+    <TextView
+        android:id="@+id/choose_from_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/topbarbackground"
+        android:textSize="@dimen/margin_size_15" />
+
+
+</LinearLayout>

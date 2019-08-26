@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginTop="10dp">
+
+    <ImageView
+        android:id="@+id/downcb"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="6dp"
+        android:src="@drawable/checkbox_checked"
+        android:visibility="gone" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="140dp"
+        android:layout_height="80dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/downvideoImg"
+        android:src="@drawable/default_placeholder_01"
+        android:layout_toRightOf="@+id/downcb"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="@dimen/image_round_radius"
+        app:riv_mutate_background="true"
+        app:riv_tile_mode="repeat"
+         />
+
+    <TextView
+        android:id="@+id/downvideoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@+id/downvideoImg"
+        android:maxLines="2"
+        android:text="标题"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_14" />
+
+    <TextView
+        android:id="@+id/downvideoTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="6dp"
+        android:layout_toRightOf="@+id/downvideoImg"
+        android:textColor="@color/text_grayb"
+        android:textSize="@dimen/font_size_12" />
+
+    <RelativeLayout
+        android:id="@+id/downbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/downvideoImg">
+
+        <TextView
+            android:id="@+id/downTotal2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="200M"
+            android:layout_marginLeft="6dp"
+            android:textColor="@color/text_grayb"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_toRightOf="@+id/downTotal2"
+            android:id="@+id/currentSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="120kb/s"
+            android:textColor="@color/text_grayb"
+            android:textSize="10sp" />
+
+
+
+        <TextView
+            android:id="@+id/downTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="200M"
+            android:textColor="@color/text_grayb"
+            android:textSize="10sp" />
+
+        <ProgressBar
+            android:id="@+id/downprogress"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/downTotal"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="5dp"
+            android:max="100"
+            android:progress="50"
+            android:progressDrawable="@drawable/progressbar_background" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

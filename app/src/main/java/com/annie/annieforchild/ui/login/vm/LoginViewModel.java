@@ -36,6 +36,7 @@ public class LoginViewModel extends BaseViewModel<DemoRepository> {
     public BindingCommand onLoginClick = new BindingCommand(new BindingAction() {
         @Override
         public void call() {
+
             if (!RegexUtils.isMobileSimple(phone.get())) {
                 ToastUtils.showShort("输入手机号有误！");
                 return;

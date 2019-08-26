@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mineModel"
+            type="com.xingzhi.xingzhiclass.mine.MineFragment" />
+
+    </data>
+
+    <com.xingzhi.xingzhiclass.common.view.ZoomInScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/appbackground">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/topbarbackground">
+
+                <ImageView
+                    android:id="@+id/mineHeadImg"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="50dp"
+                    android:onClick="@{mineModel.clickEvent}"
+                    android:src="@drawable/default_user_headimg"
+                    app:userHead="@{mineModel.userImage}" />
+
+
+                <TextView
+                    android:id="@+id/minelogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="5dp"
+                    android:onClick="@{mineModel.clickEvent}"
+                    android:text="@={mineModel.userName}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_18" />
+
+                <RelativeLayout
+                    android:id="@+id/mineSetting"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:onClick="@{mineModel.clickEvent}">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/mine_setting"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/mineinfoRl"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:onClick="@{mineModel.clickEvent}">
+
+                    <ImageView
+                        android:id="@+id/mine_info"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/mine_info" />
+
+                    <TextView
+                        android:id="@+id/mine_info_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/mine_info"
+                        android:text="个人信息"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mine_info_tv"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_toRightOf="@+id/mine_info"
+                        android:text="编辑信息"
+                        android:textColor="@color/text_grayb"
+                        android:textSize="12dp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divider" />
+
+                <RelativeLayout
+                    android:id="@+id/mineSystemRl"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:onClick="@{mineModel.clickEvent}">
+
+                    <ImageView
+                        android:id="@+id/mine_systemmsg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/mine_system_notify" />
+
+                    <TextView
+                        android:id="@+id/mine_systemmsg_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/mine_systemmsg"
+                        android:text="系统通知"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mine_systemmsg_tv"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_toRightOf="@+id/mine_systemmsg"
+                        android:text="点击查看"
+                        android:textColor="@color/text_grayb"
+                        android:textSize="12dp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/mineDownloadRl"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:onClick="@{mineModel.clickEvent}">
+
+                <ImageView
+                    android:id="@+id/mineDownloadimg"
+                    android:layout_width="@dimen/mine_item_icon_size"
+                    android:layout_height="@dimen/mine_item_icon_size"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_size_15"
+                    android:src="@drawable/mine_download" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/mineDownloadimg"
+                    android:text="离线缓存"
+                    android:textColor="@color/text_black" />
+
+
+                <ImageView
+                    android:layout_width="6dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/item_arrow_icon" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_heigh"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mineCollectRl"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@color/white"
+                android:onClick="@{mineModel.clickEvent}">
+
+                <ImageView
+                    android:id="@+id/mineCollectImg"
+                    android:layout_width="@dimen/mine_item_icon_size"
+                    android:layout_height="@dimen/mine_item_icon_size"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_size_15"
+                    android:src="@drawable/mine_collect" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/mineCollectImg"
+                    android:text="视频收藏"
+                    android:textColor="@color/text_black" />
+
+
+                <ImageView
+                    android:layout_width="6dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/item_arrow_icon" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_heigh"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mineOrderRl"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@color/white"
+                android:onClick="@{mineModel.clickEvent}">
+
+                <ImageView
+                    android:id="@+id/mineOrderImg"
+                    android:layout_width="@dimen/mine_item_icon_size"
+                    android:layout_height="@dimen/mine_item_icon_size"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_size_15"
+                    android:src="@drawable/mine_order" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/mineOrderImg"
+                    android:text="我的订单"
+                    android:textColor="@color/text_black" />
+
+
+                <ImageView
+                    android:layout_width="6dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/item_arrow_icon" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_heigh"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mineSuggestRl"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@color/white"
+                android:onClick="@{mineModel.clickEvent}">
+
+                <ImageView
+                    android:id="@+id/mineSuggestImg"
+                    android:layout_width="@dimen/mine_item_icon_size"
+                    android:layout_height="@dimen/mine_item_icon_size"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_size_15"
+                    android:src="@drawable/mine_suggest" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/mineSuggestImg"
+                    android:text="意见反馈"
+                    android:textColor="@color/text_black" />
+
+
+                <ImageView
+                    android:layout_width="6dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/item_arrow_icon" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_heigh"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mineCallRl"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@color/white"
+                android:onClick="@{mineModel.clickEvent}">
+
+                <ImageView
+                    android:id="@+id/mineCallImg"
+                    android:layout_width="@dimen/mine_item_icon_size"
+                    android:layout_height="@dimen/mine_item_icon_size"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_size_15"
+                    android:src="@drawable/mine_call" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/mineCallImg"
+                    android:text="联系客服"
+                    android:textColor="@color/text_black" />
+
+
+                <ImageView
+                    android:layout_width="6dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/item_arrow_icon" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_heigh"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mineAboutRl"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@color/white"
+                android:onClick="@{mineModel.clickEvent}">
+
+                <ImageView
+                    android:id="@+id/mineAboutImg"
+                    android:layout_width="@dimen/mine_item_icon_size"
+                    android:layout_height="@dimen/mine_item_icon_size"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_size_15"
+                    android:src="@drawable/mine_about" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/mineAboutImg"
+                    android:text="关于"
+                    android:textColor="@color/text_black" />
+
+
+                <ImageView
+                    android:layout_width="6dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/item_arrow_icon" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_heigh"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divider" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </com.xingzhi.xingzhiclass.common.view.ZoomInScrollView>
+</layout>

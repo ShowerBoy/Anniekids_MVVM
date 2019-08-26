@@ -2,6 +2,7 @@ package me.goldze.mvvmhabit.base;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 
@@ -13,11 +14,21 @@ import me.goldze.mvvmhabit.utils.Utils;
 
 public class BaseApplication extends Application {
     private static Application sInstance;
+    public static Application sAndroidApp;
+    public static Resources sResources;
+    public  static Application  mApp;
 
     @Override
     public void onCreate() {
         super.onCreate();
         setApplication(this);
+        //添加资源初始化
+        sAndroidApp=this;
+        init();
+    }
+
+    private void init() {
+        sResources = sAndroidApp.getResources();
     }
 
     /**
@@ -72,5 +83,9 @@ public class BaseApplication extends Application {
             throw new NullPointerException("please inherit BaseApplication or call setApplication.");
         }
         return sInstance;
+    }
+
+    public synchronized static Application getApp() {
+        return mApp;
     }
 }

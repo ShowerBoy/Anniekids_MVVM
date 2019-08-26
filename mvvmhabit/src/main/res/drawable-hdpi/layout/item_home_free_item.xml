@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dp"
+    android:layout_height="wrap_content">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:id="@+id/homefreeImg"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/default_placeholder_01"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="@dimen/image_round_radius"
+        app:riv_mutate_background="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="免费"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_10"
+        android:background="@drawable/shape_free_flag"/>
+
+    <TextView
+        android:id="@+id/homefreeTitle"
+        android:layout_alignLeft="@+id/homefreeImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/homefreeImg"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/font_size_12"
+        android:layout_marginTop="3dp"
+        android:text="XXXX标题"
+        />
+
+
+    <TextView
+        android:id="@+id/homefreePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/homefreeImg"
+        android:layout_below="@+id/homefreeTitle"
+        android:textColor="@color/text_yellow"
+        android:textSize="@dimen/font_size_16"
+        android:text="￥1680"
+        />
+
+    <TextView
+        android:id="@+id/homefreeBuyNum"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/homefreeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/homefreeImg"
+        android:textColor="@color/text_grayb"
+        android:layout_alignBaseline="@+id/homeCoursePrice"
+        android:textSize="@dimen/font_size_10"
+        android:text="233人购买"/>
+
+
+</RelativeLayout>

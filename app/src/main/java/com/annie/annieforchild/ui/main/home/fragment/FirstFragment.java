@@ -1,4 +1,4 @@
-package com.annie.annieforchild.ui.main.fragment;
+package com.annie.annieforchild.ui.main.home.fragment;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -22,6 +22,7 @@ import com.annie.annieforchild.AppViewModelFactory;
 import com.annie.annieforchild.BR;
 import com.annie.annieforchild.R;
 import com.annie.annieforchild.databinding.FragmentFirstBinding;
+//import com.annie.annieforchild.ui.main.fragment.RecommendFragment;
 import com.annie.annieforchild.ui.main.vm.HomepageViewModel;
 
 import net.lucode.hackware.magicindicator.ViewPagerHelper;
@@ -65,7 +66,7 @@ public class FirstFragment extends BaseFragment<FragmentFirstBinding, HomepageVi
         fragments = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             commendList.add("分类" + i);
-            fragments.add(new RecommendFragment());
+//            fragments.add(new RecommendFragment());
         }
         fragmentAdapter = new MyViewPagerFragmentAdapter(getFragmentManager());
         binding.viewpager.setAdapter(fragmentAdapter);

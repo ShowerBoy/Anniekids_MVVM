@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <data>
+
+        <variable
+            name="register"
+            type="com.xingzhi.xingzhiclass.mine.activity.RegisterThirdActivity" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/half_transparent"
+            android:visibility="invisible">
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/registerBack"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="@{register.onRegisterEvent}"
+            android:layout_marginLeft="@dimen/margin_size_15"
+            android:layout_marginTop="@dimen/margin_size_15"
+            android:src="@drawable/icon_back" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="110dp"
+            android:src="@drawable/logo" />
+
+        <RelativeLayout
+            android:id="@+id/rphoneLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/logo"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:id="@+id/rphoneIcon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/icon_login_phone_num" />
+
+
+            <EditText
+                android:id="@+id/rphoneInput"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="@string/mine_input_phone"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_14"
+                android:textColorHint="@color/text_hint"
+                android:layout_toRightOf="@+id/rphoneIcon"
+                android:background="@null"
+                android:padding="5dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rverfitLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/rphoneLayout"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:id="@+id/rverfitIcon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/icon_login_paswd" />
+
+            <TextView
+                android:id="@+id/verfibtn"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/border_square_white"
+                android:gravity="center"
+                android:text="@={register.timerDown}"
+                android:onClick="@{register.onRegisterEvent}"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/rverfitInput"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="@string/mine_input_verfi"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_14"
+                android:textColorHint="@color/text_hint"
+                android:layout_toLeftOf="@+id/verfibtn"
+                android:layout_toRightOf="@+id/rverfitIcon"
+                android:background="@null"
+                android:padding="5dp" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white" />
+        </RelativeLayout>
+
+
+
+
+
+        <TextView
+            android:id="@+id/registerBtn"
+            android:onClick="@{register.onRegisterEvent}"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/rverfitLayout"
+            android:layout_marginLeft="@dimen/margin_size_50"
+            android:layout_marginRight="@dimen/margin_size_50"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_button_bg"
+            android:gravity="center"
+            android:text="立即绑定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_18" />
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appbackground">
+
+
+    <include layout="@layout/layout_title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/detailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/topBar"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:baselineAligned="false">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/orderImage"
+            android:layout_width="128dp"
+            android:layout_height="74dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_placeholder_01"
+            app:riv_corner_radius="@dimen/image_round_radius"
+            app:riv_mutate_background="true"
+            app:riv_tile_mode="repeat" />
+
+        <TextView
+            android:id="@+id/orderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/orderImage"
+            android:text="XXXXX"
+            android:textColor="@color/text_black" />
+
+
+        <TextView
+            android:id="@+id/orderDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/orderImage"
+            android:text="XXXXX"
+            android:textColor="@color/text_grayb"
+            android:textSize="@dimen/font_size_12" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_heigh"
+            android:layout_alignParentBottom="true"
+            android:background="@color/divider" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/detailLayout"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="商品金额"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/font_size_16" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="￥9880.0"
+            android:textColor="@color/text_yellow"
+            android:textSize="@dimen/font_size_16" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/shouldPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="应付："
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/font_size_16" />
+
+        <TextView
+            android:layout_toRightOf="@+id/shouldPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="￥9880.0"
+            android:textColor="@color/text_yellow"
+            android:textSize="@dimen/font_size_16" />
+
+        <TextView
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button_bg"
+            android:layout_width="94dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:layout_alignParentRight="true"
+            android:layout_height="38dp"
+            android:text="提交订单"/>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appbackground"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/exerciseRecoder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:id="@+id/chapterTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="上次练习: 第一章XXXXXXXX"
+            android:textColor="@color/text_grayb" />
+
+        <TextView
+            android:id="@+id/continueTest"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/chapterTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/margin_size_50"
+            android:layout_marginRight="@dimen/margin_size_50"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_button_bg"
+            android:gravity="center"
+            android:text="继续练习"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <ExpandableListView
+        android:id="@+id/expand_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:childDivider="@color/divider"
+        android:divider="@color/divider"
+        android:dividerHeight="@dimen/divider_heigh"
+        android:groupIndicator="@null" />
+
+</LinearLayout>

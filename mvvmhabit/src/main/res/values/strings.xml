@@ -9,4 +9,10 @@
     <string name="customactivityoncrash_error_activity_error_details_copy">复制日志</string>
     <string name="customactivityoncrash_error_activity_error_details_copied">复制日志</string>
     <string name="customactivityoncrash_error_activity_error_details_clipboard_label">错误信息</string>
+
+    <string name="tabhost_home">首页</string>
+    <string name="tabhost_route">路线</string>
+    <string name="tabhost_clockin">打卡</string>
+    <string name="tabhost_collect">收藏</string>
+    <string name="tabhost_mine">我的</string>
 </resources>

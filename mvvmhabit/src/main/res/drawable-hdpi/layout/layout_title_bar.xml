@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/topBar"
+    android:background="@color/topbarbackground"
+    android:layout_height="42dp">
+
+    <TextView
+        android:id="@+id/topBarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"/>
+
+    <RelativeLayout
+        android:id="@+id/topBarLeftLayout"
+        android:layout_width="40dp"
+        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/topBarLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/topBarRight"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"/>
+
+    <TextView
+        android:id="@+id/topBarRightTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="完成"
+        android:visibility="gone"
+        android:layout_marginRight="15dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/white"/>
+
+
+
+</RelativeLayout>

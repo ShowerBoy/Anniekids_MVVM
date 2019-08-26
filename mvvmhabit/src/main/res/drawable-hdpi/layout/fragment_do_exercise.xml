@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+
+        <import type="android.view.View" />
+
+        <variable
+            name="exerciseModel"
+            type="com.xingzhi.xingzhiclass.exercise.fragment.DoExerciseFragment" />
+
+    </data>
+
+    <ScrollView
+        android:id="@+id/exerciseScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/exerciseFlag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/border_corner_blue"
+                android:paddingBottom="2dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="2dp"
+                android:text="选择题"
+                android:textColor="@color/text_blue" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@={exerciseModel.title}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_14" />
+
+            <RelativeLayout
+                android:id="@+id/optionALayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:onClick="@{exerciseModel.onOptionClick}">
+
+                <ImageView
+                    android:id="@+id/optionA"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/option_a"
+                    app:optionStatus="@{exerciseModel.optionStatusA}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/optionA"
+                    android:text="@={exerciseModel.optionA}"
+                    android:textColor="@color/text_black" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/optionBLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:onClick="@{exerciseModel.onOptionClick}">
+
+                <ImageView
+                    android:id="@+id/optionB"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/option_b"
+                    android:scaleType="fitXY"
+                    app:optionStatus="@{exerciseModel.optionStatusB}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/optionB"
+                    android:text="@={exerciseModel.optionB}"
+                    android:textColor="@color/text_black" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/optionCLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:onClick="@{exerciseModel.onOptionClick}">
+
+                <ImageView
+                    android:id="@+id/optionC"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/option_c"
+                    android:scaleType="fitXY"
+                    app:optionStatus="@{exerciseModel.optionStatusC}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/optionC"
+                    android:text="@={exerciseModel.optionC}"
+                    android:textColor="@color/text_black" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/optionDLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:onClick="@{exerciseModel.onOptionClick}">
+
+                <ImageView
+                    android:id="@+id/optionD"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/option_d"
+                    app:optionStatus="@{exerciseModel.optionStatusD}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/optionD"
+                    android:text="@={exerciseModel.optionD}"
+                    android:textColor="@color/text_black" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:visibility="@{exerciseModel.showAnswer? View.VISIBLE:View.GONE}"
+                android:text="@={exerciseModel.answer}"
+                android:textColor="@color/text_black" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:text="参考解析"
+                android:visibility="@{exerciseModel.showAnswer? View.VISIBLE:View.GONE}"
+                android:textColor="@color/text_blue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:visibility="@{exerciseModel.showAnswer? View.VISIBLE:View.GONE}"
+                android:scrollbars="vertical"
+                android:text="@={exerciseModel.analysis}"
+                android:textColor="@color/text_grayb" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</layout>

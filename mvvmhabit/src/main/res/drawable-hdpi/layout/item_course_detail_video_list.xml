@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="15dp"
+    android:background="@drawable/bg_corner_gray"
+    android:layout_height="40dp">
+
+    <TextView
+        android:id="@+id/videoChapterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/font_size_12"
+        android:textColor="@color/text_grayb"
+        android:layout_marginLeft="15dp"
+        android:text="标题xxxxxxxxxxxxxxxxxxxxxx"/>
+
+    <ImageView
+        android:id="@+id/videoChapterDownImg"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        />
+
+
+
+</RelativeLayout>

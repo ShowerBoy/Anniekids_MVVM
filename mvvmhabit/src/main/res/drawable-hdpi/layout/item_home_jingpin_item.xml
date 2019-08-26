@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:id="@+id/homeCourseImg"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/default_placeholder_01"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="@dimen/image_round_radius"
+        app:riv_mutate_background="true"
+        app:riv_tile_mode="repeat"
+        />
+
+    <TextView
+        android:id="@+id/homeCourseTitle"
+        android:layout_alignLeft="@+id/homeCourseImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/homeCourseImg"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/font_size_12"
+        android:layout_marginTop="3dp"
+        android:text="XXXX标题"
+        />
+
+
+    <TextView
+        android:id="@+id/homeCoursePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/homeCourseImg"
+        android:layout_below="@+id/homeCourseTitle"
+        android:textColor="@color/text_yellow"
+        android:textSize="@dimen/font_size_16"
+        android:text="￥1680"
+        />
+
+    <TextView
+        android:id="@+id/homeCourseBuyNum"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/homeCourseTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/homeCourseImg"
+        android:textColor="@color/text_grayb"
+        android:layout_alignBaseline="@+id/homeCoursePrice"
+        android:textSize="@dimen/font_size_10"
+        android:text="233人购买"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_height="@dimen/app_item_height">
+        <View
+            android:id="@+id/sectionFlag"
+            android:layout_width="4dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:background="@color/topbarbackground"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/sectionTitle"
+            android:layout_toRightOf="@+id/sectionFlag"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/text_black"
+            android:textStyle="bold"
+            android:text="安妮鲜花每周推荐"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+<android.support.design.widget.TabLayout
+    android:id="@+id/tab_layout"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"></android.support.design.widget.TabLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:id="@+id/home_recommend_rcv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@color/appbackground"
+        android:layout_height="5dp"/>
+
+
+</LinearLayout>

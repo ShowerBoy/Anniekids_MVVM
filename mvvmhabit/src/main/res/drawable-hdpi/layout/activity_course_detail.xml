@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/coursedetailImg"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/default_placeholder_01"/>
+
+    <ImageView
+        android:id="@+id/coursedetailBack"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="@dimen/margin_size_15"
+        android:layout_marginTop="@dimen/margin_size_15"
+        android:src="@drawable/icon_back" />
+
+    <TextView
+        android:id="@+id/coursedetailTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="标题"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/text_black"
+        android:layout_below="@+id/coursedetailImg"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/coursedetailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9880"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/text_yellow"
+        android:layout_below="@+id/coursedetailImg"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/coursedetailBuy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_gray"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_below="@+id/coursedetailTitle2"
+        android:text="购买用户2000+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_gray"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/coursedetailTitle2"
+        android:text="原价:10800"/>
+
+    <android.support.design.widget.TabLayout
+        android:layout_below="@+id/coursedetailBuy"
+        android:id="@+id/courseTabLayout"
+        app:tabIndicatorColor="@color/topbarbackground"
+        app:tabSelectedTextColor="@color/topbarbackground"
+        app:tabTextColor="@color/text_grayb"
+        android:layout_width="match_parent"
+        app:tabBackground="@color/white"
+        android:layout_height="35dp" />
+    <android.support.v4.view.ViewPager
+        android:layout_below="@+id/courseTabLayout"
+        android:id="@+id/courseViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="3dp"
+        android:layout_height="40dp">
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_width="0dp"
+            android:background="@drawable/shape_button_puple_bg"
+            android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="免费试听"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="@drawable/shape_button_bg"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="立即购买"
+                android:onClick="onClick"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
