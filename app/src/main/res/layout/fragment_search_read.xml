@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.annie.annieforchild.ui.main.vm.SearchReadViewModel" />
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:id="@+id/all_rcview"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="流利读"
+            android:gravity="center"
+            />
+    </LinearLayout>
+</layout>

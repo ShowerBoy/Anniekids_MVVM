@@ -2,10 +2,10 @@ package com.annie.annieforchild.entity;
 
 import com.annie.annieforchild.view.loopPager.LooperBaseBean;
 
-public class Banner   extends LooperBaseBean {
+public class Banner  extends  LooperBaseBean {
 //    private String url;
 //    private String imageUrl;
-
+//
 //    public String getUrl() {
 //        return url;
 //    }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/margin_size_4"
+    app:cardElevation="@dimen/margin_size_2"
+    android:layout_margin="@dimen/margin_size_10">
+    <RelativeLayout
+        android:layout_width="165dp"
+        android:layout_height="90dp"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/iv_home_hri_gride"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/iv_placeholder" />
+    </RelativeLayout>
+
+
+
+</android.support.v7.widget.CardView>

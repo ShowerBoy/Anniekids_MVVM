@@ -1,6 +1,7 @@
 package com.annie.annieforchild.ui.login.vm;
 
 import android.app.Application;
+import android.content.Intent;
 import android.databinding.ObservableField;
 import android.support.annotation.NonNull;
 
@@ -52,6 +53,11 @@ public class LoginViewModel extends BaseViewModel<DemoRepository> {
                             model.savePassword(psd.get());
                             ToastUtils.showShort(baseResponse.getMsg());
 //                            startActivity(AddStudentActivity.class);
+                            LoginByCodeBean data = baseResponse.getData();
+                            String defaultUsername = data.getDefaultUsername();
+                            String token = data.getToken();
+
+//                            model.saveToken(token);
                             startActivity(MainActivity.class);
                             finish();
                         }

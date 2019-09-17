@@ -6,6 +6,8 @@ package com.annie.annieforchild.view.recycler;
  */
 
 import android.content.Context;
+import android.databinding.DataBindingUtil;
+import android.databinding.ViewDataBinding;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -53,6 +55,8 @@ public abstract class BaseAdapter<T> extends RecyclerView.Adapter<BaseRecycleHol
     @Override
     public BaseRecycleHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(mContext).inflate(getLayoutId(viewType),parent,false);
+
+//        ViewDataBinding viewDataBinding = DataBindingUtil.inflate(LayoutInflater.from(mContext), viewType, parent, false);
         return new BaseRecycleHolder(view);
     }
 

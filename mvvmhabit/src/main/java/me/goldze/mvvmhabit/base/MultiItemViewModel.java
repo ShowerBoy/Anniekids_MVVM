@@ -22,4 +22,6 @@ public class MultiItemViewModel<VM extends BaseViewModel> extends ItemViewModel<
     public MultiItemViewModel(@NonNull VM viewModel) {
         super(viewModel);
     }
+
+
 }

@@ -13,4 +13,12 @@ public class ItemViewModel<VM extends BaseViewModel> {
     public ItemViewModel(@NonNull VM viewModel) {
         this.viewModel = viewModel;
     }
+
+    public VM getViewModel() {
+        return viewModel;
+    }
+
+    public void setViewModel(VM viewModel) {
+        this.viewModel = viewModel;
+    }
 }

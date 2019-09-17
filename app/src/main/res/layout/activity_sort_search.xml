@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<data>
+    <variable
+        name="ViewModel"
+        type="com.annie.annieforchild.ui.main.vm.SortSearchViewModel" />
+</data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/margin_size_10"
+                android:src="@drawable/icon_left" />
+            <android.support.v7.widget.SearchView
+                android:id="@+id/home_search"
+                android:layout_width="288dp"
+                android:layout_height="34dp"
+                android:layout_margin="6dp"
+                android:layout_toRightOf="@+id/iv_left"
+                app:iconifiedByDefault="false"
+                app:queryHint="请输入名称" />
+            <TextView
+                android:id="@+id/tv_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="4dp"
+                android:text="取消"
+                android:layout_alignParentRight="true"
+                android:padding="5dp" />
+        </RelativeLayout>
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_search"
+            app:tabSelectedTextColor="@color/topbarbackground"
+            app:tabGravity="fill"
+
+            app:tabIndicatorColor="@color/topbarbackground"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/search_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></android.support.v4.view.ViewPager>
+    </LinearLayout>
+
+
+
+</layout>

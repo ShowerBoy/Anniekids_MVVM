@@ -4,10 +4,14 @@ import android.support.annotation.NonNull;
 
 import com.annie.annieforchild.data.source.http.HttpDataSource;
 import com.annie.annieforchild.data.source.local.LocalDataSource;
+import com.annie.annieforchild.entity.Banner;
 import com.annie.annieforchild.entity.DemoEntity;
 import com.annie.annieforchild.entity.ForgetPsdBean;
 import com.annie.annieforchild.entity.HomeData;
 import com.annie.annieforchild.entity.LoginByCodeBean;
+import com.annie.annieforchild.entity.PictureBookBean;
+import com.annie.annieforchild.entity.SortSearchBean;
+import com.annie.annieforchild.entity.StudentBean;
 import com.annie.annieforchild.entity.VcodeBean;
 
 import org.reactivestreams.Publisher;
@@ -40,7 +44,6 @@ public class DemoRepository extends BaseModel implements HttpDataSource, LocalDa
         return INSTANCE;
     }
 
-
     @Override
     public void toTaobao(String url) {
         localDataSource.toTaobao(url);
@@ -55,6 +58,16 @@ public class DemoRepository extends BaseModel implements HttpDataSource, LocalDa
     public void savePassword(String password) {
         localDataSource.savePassword(password);
     }
+    @Override
+    public void saveToken(String token) {
+        localDataSource.saveToken(token);
+    }
+
+    @Override
+    public String getToken() {
+        return localDataSource.getToken();
+    }
+
 
     @Override
     public String getPhone() {
@@ -70,6 +83,7 @@ public class DemoRepository extends BaseModel implements HttpDataSource, LocalDa
     public Observable<Object> guide() {
         return httpDataSource.guide();
     }
+
 
     @Override
     public Observable<BaseResponse<VcodeBean>> getVerificationCode(String phone, String username, int type) {
@@ -96,10 +110,21 @@ public class DemoRepository extends BaseModel implements HttpDataSource, LocalDa
         return httpDataSource.bindStudent(username, phone, code, serialNumber);
     }
 
+
     @Override
     public Observable<BaseResponse<HomeData>> getHomeData(String username) {
         return httpDataSource.getHomeData(username);
     }
+
+    @Override
+    public Observable<BaseResponse<StudentBean>> getStudent(int age, String name) {
+        return httpDataSource.getStudent(age,name);
+    }
+
+//    @Override
+//    public Observable<BaseResponse<SortSearchBean>> getSortTypeList(String keyword, int page, int type) {
+//        return httpDataSource.getSortTypeList(keyword,page,type);
+//    }
 
 
 }

@@ -6,8 +6,10 @@ import android.widget.ImageView;
 import com.annie.annieforchild.R;
 import com.annie.annieforchild.entity.HomeAnimitorBean;
 import com.annie.annieforchild.entity.HomeEarBean;
+import com.annie.annieforchild.utils.ImageLoaderUtil;
 import com.annie.annieforchild.view.recycler.BaseAdapter;
 import com.annie.annieforchild.view.recycler.BaseRecycleHolder;
+import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
 
 import java.util.List;
@@ -21,11 +23,10 @@ public class HomeEarAdapter  extends BaseAdapter<HomeEarBean> {
 
     @Override
     public void convert(BaseRecycleHolder holder, HomeEarBean item, int position) {
-        ImageView image = holder.getView(R.id.iv_home_ear);
-        holder.setText(R.id.tv_ear_title,item.getTitle());
+         ImageView image = holder.getView(R.id.iv_home_ear);
+         holder.setText(R.id.tv_ear_title,item.getTitle());
 //        ImageLoaderUtil.displayImage(ImageLoaderUtil.PLAYHOLER_IMAGE_TYPE.BIG_BG,manager,item.getImageUrl(),image);
-//        holder.setText(R.id.tv_ear_title,item.getTitle());
-
+        Glide.with(mContext).load(item.getImageUrl()).into(image);
 
     }
 

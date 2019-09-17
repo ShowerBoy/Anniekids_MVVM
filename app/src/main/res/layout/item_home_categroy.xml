@@ -1,26 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/flexbox_rcview"
+    <data>
+        <variable
+            name="viewModel"
+            type="com.annie.annieforchild.ui.main.vm.LabelListViewModel" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    </android.support.v7.widget.RecyclerView>
-    <!--<com.google.android.flexbox.FlexboxLayout-->
-        <!--android:id="@+id/home_flowlayout"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="20dp"-->
-        <!--app:flexDirection="row"-->
-        <!--app:flexWrap="wrap"-->
-        <!--app:justifyContent="flex_start"-->
-        <!--app:alignItems="baseline"-->
-        <!--app:alignContent="space_around" />-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_height="@dimen/app_item_height">
 
+            <TextView
+                android:id="@+id/sectionTitle"
+                android:layout_toRightOf="@+id/sectionFlag"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/text_black"
+                android:textStyle="bold"
+                android:text="热门类别"
+                android:layout_marginLeft="15dp"
+                android:drawablePadding="@dimen/margin_size_5"
+                android:drawableLeft="@drawable/icon_hot_categroy"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <com.nex3z.flowlayout.FlowLayout
+            android:id="@+id/flowRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_5"
+            app:flChildSpacing="8dp"
+            app:flRowSpacing="8dp">
+        </com.nex3z.flowlayout.FlowLayout>
 
 </LinearLayout>
+
+
+
+
+</layout>

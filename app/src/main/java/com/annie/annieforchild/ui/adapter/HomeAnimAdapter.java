@@ -9,4 +9,6 @@ public class HomeAnimAdapter extends BindingRecyclerViewAdapter {
     public void onBindBinding(ViewDataBinding binding, int variableId, int layoutRes, int position, Object item) {
         super.onBindBinding(binding, variableId, layoutRes, position, item);
     }
+
+
 }

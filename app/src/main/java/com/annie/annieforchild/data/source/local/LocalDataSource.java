@@ -24,4 +24,19 @@ public interface LocalDataSource {
      * 获取用户密码
      */
     String getPassword();
+
+    /**
+     * 保存用户token
+     */
+
+    void saveToken(String token);
+
+    /**
+     * 获取用户的token
+     */
+    String  getToken();
+
+
+
+
 }

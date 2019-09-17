@@ -8,11 +8,10 @@ import android.support.v4.content.ContextCompat;
 import com.annie.annieforchild.BR;
 import com.annie.annieforchild.R;
 import com.annie.annieforchild.databinding.ActivityMainBinding;
-import com.annie.annieforchild.ui.main.fragment.FifthFragment;
-import com.annie.annieforchild.ui.main.home.fragment.FirstFragment;
-import com.annie.annieforchild.ui.main.fragment.FourthFragment;
-import com.annie.annieforchild.ui.main.fragment.SecondFragment;
-import com.annie.annieforchild.ui.main.fragment.ThirdFragment;
+import com.annie.annieforchild.ui.person.fragment.PersonFragment;
+import com.annie.annieforchild.ui.discover.fragment.DiscoverFragment;
+import com.annie.annieforchild.ui.routemap.fragment.RouteMapFragment;
+import com.annie.annieforchild.ui.clockin.fragment.ClockInFragment;
 import com.annie.annieforchild.ui.main.home.fragment.HomeFragment;
 
 import java.util.ArrayList;
@@ -48,10 +47,10 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, BaseViewMode
     private void initFragment() {
         fragments = new ArrayList<>();
         fragments.add(new HomeFragment());
-        fragments.add(new SecondFragment());
-        fragments.add(new ThirdFragment());
-        fragments.add(new FourthFragment());
-        fragments.add(new FifthFragment());
+        fragments.add(new RouteMapFragment());
+        fragments.add(new ClockInFragment());
+        fragments.add(new DiscoverFragment());
+        fragments.add(new PersonFragment());
         //默认选中第一个
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.add(R.id.frameLayout, fragments.get(0));

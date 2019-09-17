@@ -43,7 +43,7 @@ ext {
             "retrofit"                             : "com.squareup.retrofit2:retrofit:2.4.0",
             "converter-gson"                       : "com.squareup.retrofit2:converter-gson:2.4.0",
             "adapter-rxjava"                       : "com.squareup.retrofit2:adapter-rxjava2:2.4.0",
-            //glide图片加载
+            //glide图片加载  4.8.0  3.7.0
             "glide"                                : "com.github.bumptech.glide:glide:4.8.0",
             "glide-compiler"                       : "com.github.bumptech.glide:compiler:4.8.0",
             //json解析
@@ -67,8 +67,18 @@ ext {
             "SmartRefreshLayout"                   : "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0",
             "circleimageview"                      : "de.hdodenhof:circleimageview:3.0.0",
             "banner"                               : "com.youth.banner:banner:1.4.10",
-            "magicIndicator"                       : "com.github.hackware1993:MagicIndicator:1.5.0"
+            "magicIndicator"                       : "com.github.hackware1993:MagicIndicator:1.5.0",
+
+            //ijkplayer
+            "ijkplayer-java"                            : "tv.danmaku.ijk.media:ijkplayer-java:0.8.0",
+            "ijkplayer-armv7a"                          : "tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.0",
+//            "videocache"                                :  "com.danikula:videocache:2.7.0",
+            "ijkplayer-armv5"                           :'tv.danmaku.ijk.media:ijkplayer-armv5:0.8.8',
+            "ijkplayer-arm64"                           : 'tv.danmaku.ijk.media:ijkplayer-arm64:0.8.8',
+            "ijkplayer-x86"                             : 'tv.danmaku.ijk.media:ijkplayer-x86:0.8.8',
+
     ]
+
 }
 
 

@@ -3,18 +3,26 @@ package com.annie.annieforchild.entity;
 public class HomeHriBean {
 
     public  int type;
-    public  String url;
+    public  String imageUrl;
 
-    public HomeHriBean(int type, String url) {
+    public HomeHriBean(int type, String imageUrl) {
         this.type = type;
-        this.url = url;
+        this.imageUrl = imageUrl;
     }
 
-    public String getUrl() {
-        return url;
+    public int getType() {
+        return type;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setType(int type) {
+        this.type = type;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

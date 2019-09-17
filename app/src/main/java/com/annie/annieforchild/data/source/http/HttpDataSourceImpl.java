@@ -1,10 +1,13 @@
 package com.annie.annieforchild.data.source.http;
 
 import com.annie.annieforchild.data.source.http.service.NetService;
+import com.annie.annieforchild.entity.Banner;
 import com.annie.annieforchild.entity.DemoEntity;
 import com.annie.annieforchild.entity.ForgetPsdBean;
 import com.annie.annieforchild.entity.HomeData;
 import com.annie.annieforchild.entity.LoginByCodeBean;
+import com.annie.annieforchild.entity.SortSearchBean;
+import com.annie.annieforchild.entity.StudentBean;
 import com.annie.annieforchild.entity.VcodeBean;
 
 import java.util.concurrent.TimeUnit;
@@ -72,4 +75,12 @@ public class HttpDataSourceImpl implements HttpDataSource {
     public Observable<BaseResponse<HomeData>> getHomeData(String username) {
         return service.getHomeData(username);
     }
+
+    @Override
+    public Observable<BaseResponse<StudentBean>> getStudent(int age, String name) {
+        return null;
+    }
+
+
+
 }

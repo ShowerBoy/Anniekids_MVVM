@@ -1,5 +1,6 @@
 package com.annie.annieforchild.view.recycler;
 
+import android.databinding.DataBindingUtil;
 import android.support.v7.widget.RecyclerView;
 import android.util.SparseArray;
 import android.view.View;
@@ -48,7 +49,6 @@ public class BaseRecycleHolder extends RecyclerView.ViewHolder{
             view.setText(text);
         }
     }
-
 
 
 }

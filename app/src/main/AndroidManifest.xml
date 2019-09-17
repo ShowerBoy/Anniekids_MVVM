@@ -9,7 +9,6 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -18,11 +17,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity
-            android:name=".ui.main.activity.MainActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
+        <activity android:name=".ui.main.activity.SortSearchActivity"></activity>
+        <activity android:name=".ui.main.activity.SearchActivity" />
+        <activity android:name=".ui.main.activity.StoryActivity" />
+        <activity android:name=".ui.main.activity.AnimationListActivity" />
+        <activity android:name=".ui.main.activity.SpeakListActivity" />
+        <activity android:name=".ui.main.activity.ReadListActivity" />
+        <activity android:name=".ui.main.activity.EarListActivity" />
+        <activity android:name=".ui.main.activity.HomeSpeakActivity" />
+        <activity android:name=".ui.main.activity.HomeReadActivity" />
+        <activity android:name=".ui.main.activity.HomeEarActivity" />
+        <activity android:name=".ui.main.activity.SquareActivity" />
+        <activity android:name=".ui.main.activity.BankBookActivity" />
+        <activity android:name=".ui.main.activity.NotificationActivity" />
+        <activity android:name=".ui.main.activity.ClassTypeActivity" />
+        <activity android:name=".play.PlayActivity" />
+        <activity android:name=".ui.main.activity.MainActivity" />
         <activity
             android:name=".ui.main.activity.GuideActivity"
             android:screenOrientation="portrait">
@@ -34,19 +44,19 @@
         </activity>
         <activity
             android:name=".ui.login.activity.LoginActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.login.activity.ForgetPsdActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.login.activity.AddStudentActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.login.activity.AddStuActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.login.activity.BindStuActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

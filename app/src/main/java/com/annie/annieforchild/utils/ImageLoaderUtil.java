@@ -1,14 +1,19 @@
 package com.annie.annieforchild.utils;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.widget.ImageView;
 
 import com.annie.annieforchild.R;
+import com.bumptech.glide.RequestBuilder;
 import com.bumptech.glide.RequestManager;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
+import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.SizeReadyCallback;
 
 public class ImageLoaderUtil {
+
 
 //    public enum PLAYHOLER_IMAGE_TYPE {
 //        /**
@@ -21,7 +26,6 @@ public class ImageLoaderUtil {
 //        MIDDLE_SQUARE,//正方形占位图
 //        BIG_BG,//大的占位图（包含轮播图等）
 //        SMALL_ICON,//小图标的垫底图，社群的分类图标等
-//
 //    }
 //
 //    /***
@@ -29,7 +33,7 @@ public class ImageLoaderUtil {
 //     */
 //    public static void displayImage(RequestManager requestManager, String url, ImageView
 //            imageView) {
-//        displayImage(com.shixi.shixitraining.shixitraining.util.ImageLoaderUtil.PLAYHOLER_IMAGE_TYPE.MIDDLE_WIDTH_BIGGER, requestManager, url, imageView);
+//        displayImage(PLAYHOLER_IMAGE_TYPE.MIDDLE_WIDTH_BIGGER, requestManager, url, imageView);
 //    }
 //
 //
@@ -39,7 +43,7 @@ public class ImageLoaderUtil {
 //     * @param url
 //     * @param imageView
 //     */
-//    public static void displayImage(com.shixi.shixitraining.shixitraining.util.ImageLoaderUtil.PLAYHOLER_IMAGE_TYPE type,
+//    public static void displayImage(PLAYHOLER_IMAGE_TYPE type,
 //                                    RequestManager requestManager,
 //                                    String url,
 //                                    ImageView imageView) {
@@ -52,7 +56,7 @@ public class ImageLoaderUtil {
 //     * @param imageView
 //     * @param bitmapTransformation 设置圆角、圆形图片等需要传bitmapTransformation参数
 //     */
-//    public static void displayImage(com.shixi.shixitraining.shixitraining.util.ImageLoaderUtil.PLAYHOLER_IMAGE_TYPE type,
+//    public static void displayImage(PLAYHOLER_IMAGE_TYPE type,
 //                                    RequestManager requestManager,
 //                                    String url,
 //                                    ImageView imageView,
@@ -66,12 +70,12 @@ public class ImageLoaderUtil {
 //     * @param imageView
 //     * @param bitmapTransformation 设置圆角、圆形图片等需要传bitmapTransformation参数
 //     */
-//    public static void displayImage(com.shixi.shixitraining.shixitraining.util.ImageLoaderUtil.PLAYHOLER_IMAGE_TYPE type,
+//    public static void displayImage(PLAYHOLER_IMAGE_TYPE type,
 //                                    RequestManager requestManager,
 //                                    String url,
 //                                    ImageView imageView,
 //                                    BitmapTransformation bitmapTransformation,
-//                                    final com.shixi.shixitraining.shixitraining.util.ImageLoaderUtil.ImageLoaderCallBack callBack) {
+//                                    final ImageLoaderCallBack callBack) {
 //        if (imageView == null) {
 //            return;
 //        }
@@ -88,6 +92,12 @@ public class ImageLoaderUtil {
 //        DrawableRequestBuilder<String> drawableRequestBuilder = requestManager
 //                .load(url)
 //                .diskCacheStrategy(DiskCacheStrategy.RESULT);
+////        RequestOptions requestOptions=new RequestOptions();
+////         requestOptions.diskCacheStrategy(DiskCacheStrategy.ALL)
+////                   .placeholder(new ColorDrawable(Color.BLACK))
+////                   .error(new ColorDrawable(Color.BLUE))
+////                   .centerCrop();
+//
 //        switch (type) {
 //            case SMALL_ICON:
 //                /**
@@ -153,8 +163,6 @@ public class ImageLoaderUtil {
 ////                loadingSourceId = R.drawable.banner_default;
 //                erroSourceId = R.drawable.playholer_big_erro;
 //                break;
-
-//
 //        }
 //        drawableRequestBuilder.placeholder(loadingSourceId)
 //                .error(erroSourceId)

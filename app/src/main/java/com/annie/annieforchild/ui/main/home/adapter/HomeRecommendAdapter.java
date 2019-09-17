@@ -23,8 +23,7 @@ public  RequestManager manager;
     @Override
     public void convert(BaseRecycleHolder holder, HomeRecommendListBean item, int position) {
         ImageView image = holder.getView(R.id.iv_home_recommend);
-//        ImageLoaderUtil.displayImage(ImageLoaderUtil.PLAYHOLER_IMAGE_TYPE.BIG_BG,manager,item.imageUrl,image);
-//        Glide.with(mContext).load(item.imageUrl).into(image);
+        holder.setText(R.id.tv_recommend_title,item.getTitle());
 
     }
 

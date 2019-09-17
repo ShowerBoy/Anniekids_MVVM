@@ -23,7 +23,7 @@
 
 //添加颜色属性
     <color name="appbackground">#F6F7FD</color>
-    <color name="topbarbackground">#F77575</color>
+    <color name="topbarbackground">#FF8A16</color>
     <color name="topbarbackgroundgray">#D5D5D5</color>
     <color name="transparent">#00000000</color>
     <color name="half_transparent">#66000000</color>

@@ -48,4 +48,14 @@ public class LocalDataSourceImpl implements LocalDataSource {
     public String getPassword() {
         return SPUtils.getInstance().getString("password");
     }
+
+    @Override
+    public void saveToken(String token) {
+        SPUtils.getInstance().put("token",token);
+    }
+
+    @Override
+    public String getToken() {
+        return SPUtils.getInstance().getString("token");
+    }
 }

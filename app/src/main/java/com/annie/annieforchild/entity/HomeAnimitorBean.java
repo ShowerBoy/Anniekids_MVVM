@@ -20,9 +20,27 @@ public class HomeAnimitorBean {
     public int id;
     public int type;
     public String imageUrl;
+    public String title;
 
-    public HomeAnimitorBean(int id, String imageUrl) {
+    public HomeAnimitorBean(int id, String imageUrl, String title) {
         this.id = id;
         this.imageUrl = imageUrl;
+        this.title = title;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

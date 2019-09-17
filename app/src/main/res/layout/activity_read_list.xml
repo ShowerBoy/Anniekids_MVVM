@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bingding="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.annie.annieforchild.ui.main.vm.ReadListViewModel" />
+    </data>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+ <ImageView
+     android:id="@+id/onBack"
+     android:layout_width="wrap_content"
+     android:layout_height="50dp"
+     android:src="@drawable/icon_left"
+    android:layout_marginLeft="@dimen/margin_size_10"
+     bingding:onClickCommand="@{viewModel.onBackClik}"
+     />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="流利读"
+            android:textSize="18sp"
+            android:gravity="center"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_search"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="@dimen/divider_heigh"
+            android:background="@color/divider"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <q.rorbin.verticaltablayout.VerticalTabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:indicator_width="3dp"
+            app:tabIndicatorColor="@color/appbackground"
+            app:tabMode="scrollable"
+            app:tabIndicatorHeight="@dimen/margin_size_1"
+            android:layout_weight="1"
+            app:tabSelectedTextColor="@color/appbackground">
+
+        </q.rorbin.verticaltablayout.VerticalTabLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+        </android.support.v4.view.ViewPager>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+</layout>

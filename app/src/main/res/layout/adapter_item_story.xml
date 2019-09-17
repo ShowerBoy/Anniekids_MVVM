@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.annie.annieforchild.ui.main.vm.StoryViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+
+            android:src="@drawable/iv_placeholder"
+            android:scaleType="centerCrop" />
+        <LinearLayout
+            android:layout_toRightOf="@+id/image"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.title}"
+                android:layout_marginLeft="@dimen/margin_size_10" />
+
+            <LinearLayout
+                android:layout_margin="@dimen/margin_size_10"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.collect}"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/icon_search" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/icon_search"
+                    android:gravity="center"
+                    android:text="@{viewModel.addBook}" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.addTable}"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/icon_search" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.number}"
+               android:layout_margin="@dimen/margin_size_10"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

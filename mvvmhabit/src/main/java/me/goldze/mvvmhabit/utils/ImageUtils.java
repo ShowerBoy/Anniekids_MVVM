@@ -82,7 +82,6 @@ public class ImageUtils {
 
     /**
      * 写图片文件 在Android系统中，文件保存在 /data/data/PACKAGE_NAME/files 目录下
-     * 
      * @throws IOException
      */
     public static void saveImage(Context context, String fileName, Bitmap bitmap)

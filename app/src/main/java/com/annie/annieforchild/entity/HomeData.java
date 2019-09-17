@@ -57,4 +57,5 @@ public class HomeData {
     public void setResource(List<ResourceBean> resource) {
         this.resource = resource;
     }
+
 }

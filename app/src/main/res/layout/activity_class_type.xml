@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:binding="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.annie.annieforchild.ui.main.vm.ClassTypeViewModel" />
+
+    </data>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="名字"
+    android:textSize="18sp"
+    />
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="年龄"
+        android:textSize="18sp"
+        android:layout_below="@+id/name"
+        />
+</RelativeLayout>
+
+
+</layout>
+
